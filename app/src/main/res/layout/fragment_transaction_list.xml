@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.upv.myfinances.views.balance.TransactionFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="org.upv.myfinances.views.balance.ItemFragment"
+        app:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/fragment_transaction" />
+
+    <uk.co.markormesher.android_fab.FloatingActionButton
+        android:id="@+id/addTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:buttonIcon="@drawable/ic_add_24dp"
+        app:buttonPosition="bottom|end" />
+
+</android.support.constraint.ConstraintLayout>
+

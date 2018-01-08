@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="24dp"
+    android:layout_marginLeft="16dp"
+
+
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="org.upv.myfinances.views.transaction.NewTransactionActivity"
+    tools:showIn="@layout/activity_new_trasaction">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="45.55"
+                    android:textColor="#0F0"
+                    android:drawableTint="#0F0"
+                    android:inputType="numberDecimal"
+                    android:drawableLeft="@drawable/ic_add_black_24dp"
+                    android:drawableStart="@drawable/ic_add_black_24dp"
+                    android:drawablePadding="16dp"
+                    android:background="@android:color/transparent"
+                    android:focusedByDefault="true"
+                    android:hint="Value" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/currency"
+                android:layout_weight="0.4"
+                android:layout_width="0dp"
+                android:paddingRight="8dp"
+                android:paddingEnd="8dp"
+                tools:text="USD"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:drawableRight="@drawable/ic_arrow_drop_down_24dp"
+                android:drawableEnd="@drawable/ic_arrow_drop_down_24dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:background="#A0A0A0"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+
+            android:drawableLeft="@drawable/ic_calendar_black_24dp"
+            android:drawableStart="@drawable/ic_calendar_black_24dp"
+            android:drawablePadding="16dp"
+
+            android:textSize="18sp"
+            tools:text="01/01/2018"
+            android:gravity="center_vertical"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:background="#A0A0A0"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+
+            android:paddingRight="8dp"
+
+            tools:text="Category"
+            android:textSize="18sp"
+            android:gravity="center_vertical"
+
+            android:drawableLeft="@drawable/ic_category_24dp"
+            android:drawableStart="@drawable/ic_category_24dp"
+
+            android:drawableRight="@drawable/ic_arrow_drop_down_24dp"
+            android:drawableEnd="@drawable/ic_arrow_drop_down_24dp"
+            android:drawablePadding="16dp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:background="#A0A0A0"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_insert_comment_black_24dp"
+                android:drawableStart="@drawable/ic_insert_comment_black_24dp"
+                android:drawablePadding="16dp"
+                android:lines="2"
+                android:background="@android:color/transparent"
+                tools:text="Description Here"
+                android:hint="Description" />
+        </android.support.design.widget.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:background="#A0A0A0"/>
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/periodicity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:text="Is Periodic"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:background="#A0A0A0"/>
+
+        <LinearLayout
+            android:id="@+id/periodicity_form"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                    android:drawableStart="@drawable/ic_date_range_black_24dp"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:gravity="end|center"
+                    android:text="Every"/>
+
+                <EditText
+                    android:id="@+id/quantityDateRange"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:inputType="number"
+                    android:gravity="center"
+                    android:hint="Quantity"/>
+
+                <Spinner
+                    android:id="@+id/dateRange"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:entries="@array/date_range"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:background="#A0A0A0"/>
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:checked="true"
+                android:paddingLeft="8dp"
+                android:paddingStart="8dp"
+                android:text="Is Forever"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:background="#A0A0A0"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/endDate_wrapper"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/endDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+
+                    android:drawableLeft="@drawable/ic_end_date_black_24dp"
+                    android:drawableStart="@drawable/ic_end_date_black_24dp"
+                    android:drawablePadding="16dp"
+
+                    android:textSize="18sp"
+                    tools:text="01/01/2018"
+                    android:gravity="center_vertical"
+                    />
+
+                <View
+                    android:id="@+id/endDate_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginStart="32dp"
+                    android:background="#A0A0A0"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/reminderable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:checked="true"
+                android:paddingLeft="8dp"
+                android:paddingStart="8dp"
+                android:text="Remind me?"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:background="#A0A0A0"/>
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/save"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SAVE AND CONTINUE"
+            android:layout_marginRight="16dp"/>
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

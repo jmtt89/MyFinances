@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/category_icon_wrapper"
+        android:layout_width="@dimen/size_wrapper_icon_category"
+        android:layout_height="@dimen/size_wrapper_icon_category"
+        app:cardBackgroundColor="#AAA"
+        app:cardCornerRadius="@dimen/radius_wrapper_icon_category"
+        app:elevation="12dp">
+
+        <ImageView
+            android:id="@+id/category_icon"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_wrapper_icon_category"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_date_range_black_24dp"/>
+    </android.support.v7.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/category_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        tools:text="Category A"
+        android:textSize="@dimen/text_size_category_item"
+        android:lines="1"
+
+        android:layout_marginLeft="@dimen/separator_text_icon_category_item"
+
+        app:layout_constraintTop_toTopOf="@id/category_icon_wrapper"
+        app:layout_constraintLeft_toRightOf="@id/category_icon_wrapper"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/category_icon_wrapper"/>
+
+</android.support.constraint.ConstraintLayout>

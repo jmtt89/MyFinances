@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="match_parent">
+
+    <SearchView
+        android:id="@+id/search_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/category_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="LinearLayoutManager"
+                tools:listitem="@layout/fragment_item_category"
+                />
+
+            <LinearLayout
+                android:id="@+id/launch_new_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="@dimen/size_wrapper_icon_category"
+                    android:layout_height="@dimen/size_wrapper_icon_category"
+                    app:cardBackgroundColor="#AAA"
+                    app:cardCornerRadius="@dimen/radius_wrapper_icon_category"
+                    app:elevation="12dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_wrapper_icon_category"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:padding="8dp"
+                        app:srcCompat="@drawable/ic_add_24dp" />
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/separator_text_icon_category_item"
+                    android:layout_weight="1"
+                    android:lines="1"
+                    android:text="New Category"
+
+                    android:textSize="@dimen/text_size_category_item" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/launch_manage_categories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="8dp"
+
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="@dimen/size_wrapper_icon_category"
+                    android:layout_height="@dimen/size_wrapper_icon_category"
+                    app:cardBackgroundColor="#AAA"
+                    app:cardCornerRadius="@dimen/radius_wrapper_icon_category"
+                    app:elevation="12dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_wrapper_icon_category"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:padding="8dp"
+                        app:srcCompat="@drawable/ic_settings_24dp" />
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/separator_text_icon_category_item"
+                    android:layout_weight="1"
+                    android:lines="1"
+                    android:text="New Category"
+
+                    android:textSize="@dimen/text_size_category_item" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</android.support.constraint.ConstraintLayout>
